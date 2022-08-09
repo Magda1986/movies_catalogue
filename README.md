@@ -11,4 +11,4 @@ The project was created while learning programming on the basis of KODILLA mater
 
 💡 Technologies
 
-HTML5 Python JSON WTF-Forms
+HTML5 Python JSON 
