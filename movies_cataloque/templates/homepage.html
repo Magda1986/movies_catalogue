@@ -7,6 +7,19 @@
         <h1 class="mt-5">Witaj w mojej bibliotece filmów</h1>
         <p class="lead">Znajdziesz tutaj tylko najlepsze tytuły!</p>
     </div>
+</div>
+<div class="row mb-4">
+    {% for key, value in list_types %}
+    <a href="/?list_type={{ value }}">
+        {% if current_list==value %}
+        <button type="button" class="btn btn-warning m-1">{{ key }}</button>
+        {% else %}
+        <button type="button" class="btn btn-outline-warning m-1">{{ key }}</button>
+        {% endif %}
+    </a>
+    {% endfor %}
+</div>
+<div class="row">
     {% for movie in movies %}
     <div class="col-lg-3 col-md-6 mb-4">
         <div class="card h-100">
@@ -15,7 +28,7 @@
                 <h4 class="card-title"> {{ movie.title }} </h4>
             </div>
             <div class="card-footer text-center">
-                <a href="#" class="btn btn-primary">Pokaż więcej</a>
+                <a href="movie/{{ movie.id }}">Pokaż więcej</a>
             </div>
         </div>
     </div>
